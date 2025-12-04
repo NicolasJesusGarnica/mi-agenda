@@ -1,0 +1,24 @@
+<div style="padding: 20px;">
+  <h2>Agenda de Usuarios Garnica Nicolas Jesus</h2>
+  
+  <table border="1" cellpadding="10" style="border-collapse: collapse; width: 100%;">
+    <thead>
+      <tr style="background-color: #f0f0f0;">
+        <th>Nombre</th>
+        <th>Email</th>
+        <th>Teléfono</th>
+        <th>Ciudad</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of usuarios">
+        <td>{{ user.nombre }}</td>
+        <td>{{ user.email }}</td>
+        <td>{{ user.telefono }}</td>
+        <td>{{ user.ciudad }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p *ngIf="usuarios.length === 0">Cargando datos...</p>
+</div>
